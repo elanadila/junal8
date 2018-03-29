@@ -19,10 +19,10 @@ public class Nomor1 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner show = new Scanner(System.in);
-        System.out.print("Input : ");
+        System.out.println("Input : ");
         int n = show.nextInt();
         long fib[] = new long[n];
-         
+        long jumlah = 0;
         fib[0] = 1;
         fib[1] = 1;
          
@@ -30,9 +30,11 @@ public class Nomor1 {
             fib[i] = fib[i-1] + fib[i-2];
         }
       System.out.println("Output : ");
-        for (int i = 0; i < n; i++) {
-
-            System.out.print(fib[i] +  " ");
+        for (int i = 0; i < n; i++) {     
         }
+        for (int i = 0; i < n; i++) {
+            jumlah=jumlah+fib[i];       
+        }
+        System.out.println(jumlah);
     }
 }
