@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nomor1;
+package reversefibonacci;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Praktikan
  */
-public class Nomor1 {
+public class ReverseFibonacci {
 
     /**
      * @param args the command line arguments
@@ -19,7 +19,7 @@ public class Nomor1 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner show = new Scanner(System.in);
-        System.out.print("Input : ");
+        System.out.println("Input : ");
         int n = show.nextInt();
         long fib[] = new long[n];
          
@@ -29,10 +29,10 @@ public class Nomor1 {
         for(int i = 2; i < n; i++) {
             fib[i] = fib[i-1] + fib[i-2];
         }
-      System.out.println("Output : ");
-        for (int i = 0; i < n; i++) {
-
+        System.out.println("Output : ");
+        for (int i=n-1; i >= 0; i--) {
             System.out.print(fib[i] +  " ");
         }
     }
+    
 }
